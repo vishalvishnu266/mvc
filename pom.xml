@@ -127,6 +127,14 @@
 </plugin>
 <!-- jooq plugin -->
       <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+        <configuration>
+          <propertyFile>src/main/resources/liquibase.properties</propertyFile>
+          <changeLogFile>src/main/resources/db/changeLog.yaml</changeLogFile>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
         <version>${quarkus.platform.version}</version>
